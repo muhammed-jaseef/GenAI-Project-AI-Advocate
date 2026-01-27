@@ -19,7 +19,6 @@ This app allows users to upload PDFs and ask questions based on document content
 
 ## 📁 Project Structure
 
-```text
 GenAI1/
 │
 ├── __pycache__/
@@ -51,6 +50,7 @@ GenAI1/
 ├── README.md
 └── requirements.txt
 
+---
 
 ## ⚙️ Tech Stack
 
@@ -72,7 +72,10 @@ GenAI1/
 4. Enable Web Search if needed.
 5. Get AI-powered answers instantly.
 
+---
+
 ## UI
 
 ![alt text](image.png)
+
 
