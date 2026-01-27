@@ -21,31 +21,32 @@ This app allows users to upload PDFs and ask questions based on document content
 
 GenAI1/
 │
-├── __pycache__/
+├── pycache/
 │
 ├── data/
 │
 ├── faiss_index/
 │
 ├── rag/
-│   ├── __pycache__/
-│   ├── __init__.py
-│   ├── chain.py
-│   ├── chunking.py
-│   ├── embeddings.py
-│   ├── loader.py
-│   ├── vector_store.py
-│   └── web_search.py
+│ ├── pycache/
+│ ├── init.py
+│ ├── chain.py
+│ ├── chunking.py
+│ ├── embeddings.py
+│ ├── loader.py
+│ ├── vector_store.py
+│ └── web_search.py
 │
 ├── UI/
-│   ├── __pycache__/
-│   └── app.py              # UI (Streamlit)
+│ ├── pycache/
+│ └── app.py # UI (Streamlit)
 │
 ├── venv/
 │
-├── .env                   # Environment variables
+├── image.png # UI Screenshot
+├── .env
 ├── .gitignore
-├── configure.py           # Env + settings
+├── configure.py
 ├── README.md
 └── requirements.txt
 
@@ -69,4 +70,7 @@ GenAI1/
 4. Enable Web Search if needed.
 5. Get AI-powered answers instantly.
 
+## UI
+
+![alt text](image.png)
 
