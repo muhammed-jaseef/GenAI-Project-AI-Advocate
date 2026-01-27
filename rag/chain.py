@@ -35,7 +35,7 @@ def get_rag_chain(mode="doc"):
     retriever = db.as_retriever(search_kwargs={"k": 3})
     llm = get_llm()
 
-    # 2. Modern Prompt Template
+    # 2.Prompt Template
     template = """
 You are a helpful and accurate AI assistant.
 
@@ -61,8 +61,7 @@ Answer:
     # Fill in the 'mode' variable early
     prompt = ChatPromptTemplate.from_template(template).partial(mode=mode)
 
-    # 3. The Modern LCEL Chain (The Pipe | Operator)
-    # This replaces RetrievalQA entirely
+    # 3. The LCEL Chain (The Pipe | Operator)
     chain = (
         {"context": retriever | format_docs, "question": RunnablePassthrough()}
         | prompt
@@ -72,26 +71,3 @@ Answer:
 
     return chain
 
-# -------------------
-# MAIN TEST BLOCK
-# -------------------
-if __name__ == "__main__":
-    print("\n--- 🛠️ Starting Modern rag.chain Test ---")
-
-    test_query = "The base salary"
-
-    try:
-        # Create chain (defaults to 'doc' mode)
-        chain = get_rag_chain(mode="doc")
-
-        print(f"🤔 Sending Query: {test_query}")
-        
-        # In LCEL, we use invoke()
-        response = chain.invoke(test_query)
-
-        print("\n✅ AI Response:\n")
-        print(response)
-
-    except Exception as e:
-        print("\n❌ Error while testing rag.chain:")
-        print(f"Details: {e}")
