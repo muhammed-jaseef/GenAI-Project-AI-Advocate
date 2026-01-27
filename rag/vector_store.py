@@ -37,24 +37,26 @@ def load_vector_store(save_path=VECTOR_DB_PATH):
 
 
 
+from rag.loader import load_documents
+from rag.chunking import chunk_documents  
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     #Load & chunk docs
-    # docs = load_documents("data/EMPLOYEE_AGREEMENT (1).pdf")
-    # chunks = chunk_documents(docs)
-# 
+    docs = load_documents("data/EMPLOYEE_AGREEMENT (1).pdf")
+    chunks = chunk_documents(docs)
+
     #Create or load vector store
-    # db = load_vector_store()
-    # if db is None:
-        # db = create_vector_store(chunks)
-# 
+    db = load_vector_store()
+    if db is None:
+        db = create_vector_store(chunks)
+
     #Test search
-    # results = db.similarity_search("employee salary", k=3)
-# 
-    # print("\nSearch Results:\n")
-    # for r in results:
-        # print(r.page_content[:200])
-        # print("-" * 50)
+    results = db.similarity_search("employee salary", k=3)
+
+    print("\nSearch Results:\n")
+    for r in results:
+        print(r.page_content[:200])
+        print("-" * 50)
 
 
 

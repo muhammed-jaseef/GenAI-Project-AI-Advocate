@@ -21,32 +21,33 @@ def get_web_search_tool(k: int = 3):
         include_raw_content=True
     )
 
-if __name__ == "__main__":
-    try:
-        # Create the tool
-        search_tool = get_web_search_tool(k=3)
 
-        # Test query
-        query = "The population in india"
+# if __name__ == "__main__":
+    # try:
 
-        print("Testing Tavily Web Search Tool...")
-        print(f"Query: {query}\n")
-
-        # Run the search
-        results = search_tool.invoke(query)
-
-        # Print results
-        print("Search Results:\n")
-
-        for i, result in enumerate(results, start=1):
-            print("Content:", result.get("content", "")[:50], "...")  # first 200 chars
+        # search_tool = get_web_search_tool(k=3)
+# 
+        
+        # query = "The population in india"
+# 
+        # print("Testing Tavily Web Search Tool...")
+        # print(f"Query: {query}\n")
+# 
+        
+        # results = search_tool.invoke(query)
+# 
+        
+        # print("Search Results:\n")
+# 
+        # for i, result in enumerate(results, start=1):
+            # print("Content:", result.get("content", "")[:50], "...")  # first 200 chars
             #print("-" * 50)
-
-        print("\n✅ Tool is working properly!")
-
-    except Exception as e:
-        print("\n❌ Error while testing Tavily tool:")
-        print(e)
+# 
+        # print("\n✅ Tool is working properly!")
+# 
+    # except Exception as e:
+        # print("\n❌ Error while testing Tavily tool:")
+        # print(e)
 
 
 
