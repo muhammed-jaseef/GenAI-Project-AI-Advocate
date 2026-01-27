@@ -19,36 +19,38 @@ This app allows users to upload PDFs and ask questions based on document content
 
 ## 📁 Project Structure
 
+```text
 GenAI1/
 │
-├── pycache/
+├── __pycache__/
 │
 ├── data/
 │
 ├── faiss_index/
 │
 ├── rag/
-│ ├── pycache/
-│ ├── init.py
-│ ├── chain.py
-│ ├── chunking.py
-│ ├── embeddings.py
-│ ├── loader.py
-│ ├── vector_store.py
-│ └── web_search.py
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── chain.py
+│   ├── chunking.py
+│   ├── embeddings.py
+│   ├── loader.py
+│   ├── vector_store.py
+│   └── web_search.py
 │
 ├── UI/
-│ ├── pycache/
-│ └── app.py # UI (Streamlit)
+│   ├── __pycache__/
+│   └── app.py              # UI (Streamlit)
 │
 ├── venv/
 │
-├── image.png # UI Screenshot
+├── image.png              # UI Screenshot
 ├── .env
 ├── .gitignore
 ├── configure.py
 ├── README.md
 └── requirements.txt
+
 
 ## ⚙️ Tech Stack
 
