@@ -1,19 +1,19 @@
 
-# 📘 GenAI RAG Chat Application
+#  GenAI RAG Chat Application
 
 A Retrieval-Augmented Generation (RAG) based chat application built using LangChain, Groq LLM, FAISS, and Streamlit.  
 This app allows users to upload PDFs and ask questions based on document content and optional web search.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 📄 Upload PDF documents
-- 🔍 Semantic search using FAISS vector store
-- 🤖 AI-powered answers using Groq LLM
-- 🌐 Optional web search integration
-- 💬 Chat-based interface (Streamlit)
-- 📚 Document-based and Web-based modes
+-  Upload PDF documents
+-  Semantic search using FAISS vector store
+-  AI-powered answers using Groq LLM
+-  Optional web search integration
+-  Chat-based interface (Streamlit)
+-  Document-based and Web-based modes
 
 ---
 
@@ -66,7 +66,7 @@ GenAI1/
 
 ---
 
-## 📝 How to Use
+##  How to Use
 
 1. Upload a PDF from the sidebar.
 2. Wait for the vector store to be created.
